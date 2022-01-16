@@ -1,6 +1,6 @@
-# a senior high school student
-- school : CHSH
-[![Top Langs ](https://github-readme-stats.vercel.app/api/top-langs/?username=dumbledore96)](https://github.com/anuraghazra/github-readme-stats)
+# Dumbledore96
+一個不為人知的高中生
+<p align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dumbledore96&theme=radical"></p>
 <!--
 **dumbledore96/dumbledore96** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
