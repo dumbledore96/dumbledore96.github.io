@@ -1,4 +1,5 @@
-### Hi there 👋
+# a senior high school student
+- school : CHSH
 
 <!--
 **dumbledore96/dumbledore96** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
