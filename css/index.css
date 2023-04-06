@@ -1352,8 +1352,8 @@ canvas:not(#ribbon-canvas),
   --tab-botton-bg: #f0f0f0;
   --tab-botton-color: #1f2d3d;
   --tab-button-hover-bg: #dcdcdc;
-  --tab-button-active-bg: rgba(255,255,255,0.8);
-  --card-bg: rgba(255,255,255,0.8);
+  --tab-button-active-bg: rgba(255,255,255,0.9);
+  --card-bg: rgba(255,255,255,0.9);
   --sidebar-bg: #f6f8fa;
   --btn-hover-color: #ff7242;
   --btn-color: #fff;
@@ -1361,7 +1361,7 @@ canvas:not(#ribbon-canvas),
   --text-bg-hover: rgba(78,84,134,0.7);
   --light-grey: #eee;
   --dark-grey: #cacaca;
-  --white: rgba(255,255,255,0.8);
+  --white: rgba(255,255,255,0.9);
   --text-highlight-color: #1f2d3d;
   --blockquote-color: #6a737d;
   --blockquote-bg: rgba(73,177,245,0.1);
@@ -1943,6 +1943,7 @@ figure.highlight pre .javascript .function {
   height: 100%;
   vertical-align: top;
   text-align: center;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .error404 #error-wrap .error-content .error-info {
@@ -1953,6 +1954,17 @@ figure.highlight pre .javascript .function {
 .error404 #error-wrap .error-content .error-info .error_title {
   margin-top: -0.6em;
   font-size: 9em;
+  -webkit-animation: anime404 0.6s cubic-bezier(0.3, 0.8, 1, 0.8) both;
+  -moz-animation: anime404 0.6s cubic-bezier(0.3, 0.8, 1, 0.8) both;
+  -o-animation: anime404 0.6s cubic-bezier(0.3, 0.8, 1, 0.8) both;
+  -ms-animation: anime404 0.6s cubic-bezier(0.3, 0.8, 1, 0.8) both;
+  animation: anime404 0.6s cubic-bezier(0.3, 0.8, 1, 0.8) both;
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  -o-animation-delay: 1.2s;
+  -ms-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+  z-index: 1;
 }
 @media screen and (max-width: 768px) {
   .error404 #error-wrap .error-content .error-info .error_title {
@@ -1964,6 +1976,65 @@ figure.highlight pre .javascript .function {
   word-break: break-word;
   font-size: 1.6em;
   -webkit-line-clamp: 2;
+}
+.error404 #error-wrap .error-content .error-info .error_buttom {
+  font-size: 1.2em;
+  color: #000;
+  margin: 0 auto;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.8);
+}
+.error404 #error-wrap .error-content .error-info .error_buttom:hover {
+  background-color: rgba(145,239,255,0.8);
+}
+@-moz-keyframes anime404 {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -webkit-transform: scale(10) skew(20deg, 20deg);
+    -moz-transform: scale(10) skew(20deg, 20deg);
+    -o-transform: scale(10) skew(20deg, 20deg);
+    -ms-transform: scale(10) skew(20deg, 20deg);
+    transform: scale(10) skew(20deg, 20deg);
+  }
+}
+@-webkit-keyframes anime404 {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -webkit-transform: scale(10) skew(20deg, 20deg);
+    -moz-transform: scale(10) skew(20deg, 20deg);
+    -o-transform: scale(10) skew(20deg, 20deg);
+    -ms-transform: scale(10) skew(20deg, 20deg);
+    transform: scale(10) skew(20deg, 20deg);
+  }
+}
+@-o-keyframes anime404 {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -webkit-transform: scale(10) skew(20deg, 20deg);
+    -moz-transform: scale(10) skew(20deg, 20deg);
+    -o-transform: scale(10) skew(20deg, 20deg);
+    -ms-transform: scale(10) skew(20deg, 20deg);
+    transform: scale(10) skew(20deg, 20deg);
+  }
+}
+@keyframes anime404 {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -webkit-transform: scale(10) skew(20deg, 20deg);
+    -moz-transform: scale(10) skew(20deg, 20deg);
+    -o-transform: scale(10) skew(20deg, 20deg);
+    -ms-transform: scale(10) skew(20deg, 20deg);
+    transform: scale(10) skew(20deg, 20deg);
+  }
 }
 .error404 + #rightside {
   display: none;
@@ -2258,7 +2329,7 @@ figure.highlight pre .javascript .function {
   float: left;
   overflow: hidden;
   margin: 15px 7px;
-  width: calc(100% / 3 - 15px);
+  width: calc(50% - 15px);
   height: 90px;
   border-radius: 8px;
   line-height: 17px;
@@ -2266,7 +2337,7 @@ figure.highlight pre .javascript .function {
 }
 @media screen and (max-width: 1024px) {
   #article-container .flink .flink-list > .flink-list-item {
-    width: calc(50% - 15px) !important;
+    width: calc(100% - 15px) !important;
   }
 }
 @media screen and (max-width: 600px) {
@@ -4462,6 +4533,12 @@ h1.page-title + .tag-cloud-list {
 }
 #waline-wrap .wl-comment-actions > button:not(last-child) {
   padding-right: 4px;
+}
+#waline-wrap textarea {
+  background: url("#waline") 100% 100% no-repeat;
+}
+#waline-wrap textarea:focus {
+  background-image: none;
 }
 .fireworks {
   position: fixed;
